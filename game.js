@@ -38,7 +38,21 @@ let dir = "";
 document.addEventListener("keydown", direction)
 
 function direction() {
-    let key = event.keyCode
+    let key = event.keyCode;
+    if (key == 37) {
+        dir = "LEFT";
+
+    }
+    else if (key == 38) {
+        dir = "UP";
+
+    }
+    else if (key == 39) {
+        dir = "RIGHT";
+    }
+    else if (key == 40) {
+        dir = "DOWN"
+    }
 }
 
 
