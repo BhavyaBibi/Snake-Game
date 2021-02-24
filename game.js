@@ -30,4 +30,7 @@ snake[0] = {
 letfood = {};
 
 //score
+let score = 0;
+
+//snake direction
 
