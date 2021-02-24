@@ -18,4 +18,10 @@ let down = new Audio();
 let left = new Audio();
 let right = new Audio();
 
+letsnake = []
+snake[0] = {
+    x: 9 * snakeBox,
+    y: 10 * snakeBox
+
+}
 
