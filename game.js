@@ -33,4 +33,14 @@ letfood = {};
 let score = 0;
 
 //snake direction
+let dir = "";
+
+document.addEventListener("keydown", direction)
+
+function direction() {
+
+}
+
+
+
 
