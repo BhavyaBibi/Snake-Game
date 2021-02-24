@@ -38,7 +38,7 @@ let dir = "";
 document.addEventListener("keydown", direction)
 
 function direction() {
-
+    let key = event.keyCode
 }
 
 
