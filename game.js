@@ -18,10 +18,16 @@ let down = new Audio();
 let left = new Audio();
 let right = new Audio();
 
+//define snake
 letsnake = []
 snake[0] = {
     x: 9 * snakeBox,
     y: 10 * snakeBox
 
 }
+
+//create food
+letfood = {};
+
+//score
 
