@@ -10,3 +10,12 @@ const totalMoves = canvasSize / snakeBox;
 
 const apple = new Image();
 apple.src = "images/apple.png";
+
+let dead = new Audio();
+let eat = new Audio();
+let up = new Audio();
+let down = new Audio();
+let left = new Audio();
+let right = new Audio();
+
+
