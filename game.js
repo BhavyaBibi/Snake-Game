@@ -19,7 +19,7 @@ let left = new Audio();
 let right = new Audio();
 
 //define snake
-letsnake = []
+let snake = []
 snake[0] = {
     x: 9 * snakeBox,
     y: 10 * snakeBox
