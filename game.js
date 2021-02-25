@@ -27,7 +27,8 @@ snake[0] = {
 }
 
 //create food
-letfood = {};
+let food = {};
+getFood();
 
 //score
 let score = 0;
@@ -64,7 +65,7 @@ function direction() {
 
 //take food
 
-functiongetFood(){
+function getFood(){
     food = {
         x: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3 * snakeBox),
         y: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3 * snakeBox),
