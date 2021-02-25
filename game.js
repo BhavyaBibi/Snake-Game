@@ -78,6 +78,11 @@ function getFood() {
 function render() {
     ctx.fillStyle = "#dcdcdc";
     ctx.fillRect(0, 0, canvasSize, canvasSize);
+    for (let i = 0; i < snake.length; ++i) {
+        ctx.fillStyle = i = 0 >? "#4cAf50" : "white";
+        ctx.fillStyle(snake[i].x, snake[i].y, snakeBox, snakeBox);
+    }
+
 }
 
 
