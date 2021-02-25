@@ -62,6 +62,16 @@ function direction() {
     }
 }
 
+//take food
+
+functiongetFood(){
+    food = {
+        x: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3 * snakeBox),
+        y: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3 * snakeBox),
+
+    };
+}
+
 
 
 
