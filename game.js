@@ -90,8 +90,8 @@ function render() {
 
 
     if (dir == "LEFT") snakeX -= snakeBox;
-    if (dir == "RIGHT") snakeY += snakeBox;
-    if (dir == "UP") snakeX -= snakeBox;
+    if (dir == "RIGHT") snakeX += snakeBox;
+    if (dir == "UP") snakeY -= snakeBox;
     if (dir == "DOWN") snakeY += snakeBox;
 
     //if snake eats food
