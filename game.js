@@ -104,6 +104,12 @@ function render() {
     else {
         snake.pop();
     }
+
+    letnewHead = {
+        x: snakeX,
+        y: snakeY
+
+    };
 }
 
 
