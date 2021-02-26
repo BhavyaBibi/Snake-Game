@@ -2,7 +2,7 @@ const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
 const canvasSize = 600;
-canvas.Width = canvasSize;
+canvas.width = canvasSize;
 canvas.height = canvasSize;
 
 const snakeBox = 20;
@@ -77,14 +77,17 @@ function getFood() {
 //for display
 
 function render() {
+
     ctx.fillStyle = "#dcdcdc";
     ctx.fillRect(0, 0, canvasSize, canvasSize);
     for (let i = 0; i < snake.length; ++i) {
         ctx.fillStyle = i == 0 ? "#4CAF50" : "white";
         ctx.fillRect(snake[i].x, snake[i].y, snakeBox, snakeBox);
+
         ctx.strokeStyle = "#E91E63";
         ctx.strokeRect(snake[i].x, snake[i].y, snakeBox, snakeBox);
     }
+
     ctx.drawImage(apple, food.x, food.y, snakeBox, snakeBox);
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -111,6 +114,12 @@ function render() {
         y: snakeY
 
     };
+    if (snakeX < 0 || snakeX >= canvasSize || snakeY < 0 || snakeY >= canvasSize) {
+        gameOver();
+        return;
+    }
+
+
     snake.unshift(newHead);
     ctx.fillStyle = "black";
     ctx.font = "40px tahoma";
@@ -121,3 +130,9 @@ function render() {
 
 render();
 var gm = setInterval(render, 100);
+function gameOver() {
+    clearInterval(gm);
+    dead.play();
+    ctx.fillStyle = "black";
+    ctx.fillText("gameOver", canvasSize / 2 - 100, canvasSize / 2);
+}
