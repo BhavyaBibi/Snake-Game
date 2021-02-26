@@ -94,6 +94,13 @@ function render() {
     if (dir == "UP") snakeX -= snakeBox;
     if (dir == "DOWN") snakeX += snakeBox;
 
+    //if snake eats food
+    if (snakeX == food.x && snakeY == food.y) {
+        score++;
+        eat.play();
+        getFood();
+    }
+
 }
 
 
