@@ -67,8 +67,8 @@ function direction() {
 
 function getFood() {
     food = {
-        x: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3 * snakeBox),
-        y: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3 * snakeBox),
+        x: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3) * snakeBox,
+        y: Math.floor(Math.random() * (totalMoves - 2 - 3) + 3) * snakeBox
 
     };
 }
@@ -82,7 +82,7 @@ function render() {
         ctx.fillStyle = i == 0 ? "#4CAF50" : "white";
         ctx.fillRect(snake[i].x, snake[i].y, snakeBox, snakeBox);
         ctx.strokeStyle = "#E91E63";
-        ctx.strokeRect(snake[i].x, snake[i].y, snakeBox, snakeBox)
+        ctx.strokeRect(snake[i].x, snake[i].y, snakeBox, snakeBox);
     }
     ctx.drawImage(apple, food.x, food.y, snakeBox, snakeBox);
     let snakeX = snake[0].x;
@@ -105,13 +105,15 @@ function render() {
         snake.pop();
     }
 
-    letnewHead = {
+    let newHead = {
         x: snakeX,
         y: snakeY
 
     };
+    snake.unshift(newHead);
 }
 
 
 
 render();
+var gm = setInterval(render, 100);
