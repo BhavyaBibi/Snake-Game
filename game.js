@@ -84,7 +84,9 @@ function render() {
         ctx.strokeStyle = "#E91E63";
         ctx.strokeRect(snake[i].x, snake[i].y, snakeBox, snakeBox)
     }
-
+    ctx.drawImage(apple, food.x, food.y, snakeBox, snakeBox);
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
 }
 
 
