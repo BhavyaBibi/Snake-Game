@@ -74,6 +74,14 @@ function getFood() {
     };
 }
 
+functioncollisionDetection(head, ar){
+    for (i = 0, i < ar.length; ++i) {
+        if (ar[i].x == head.x && ar[i] == head.y) {
+            return true;
+        }
+    }
+    return false;
+}
 //for display
 
 function render() {
