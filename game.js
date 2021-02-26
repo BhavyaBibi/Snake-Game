@@ -74,9 +74,9 @@ function getFood() {
     };
 }
 
-functioncollisionDetection(head, ar){
-    for (i = 0, i < ar.length; ++i) {
-        if (ar[i].x == head.x && ar[i] == head.y) {
+function collisionDetection(head, ar) {
+    for (i = 0; i < ar.length; ++i) {
+        if (ar[i].x == head.x && ar[i].y == head.y) {
             return true;
         }
     }
@@ -122,7 +122,7 @@ function render() {
         y: snakeY
 
     };
-    if (snakeX < 0 || snakeX >= canvasSize || snakeY < 0 || snakeY >= canvasSize) {
+    if (snakeX < 0 || snakeX >= canvasSize || snakeY < 0 || snakeY >= canvasSize || collisionDetection(newHead, snake)) {
         gameOver();
         return;
     }
