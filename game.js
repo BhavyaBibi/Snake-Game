@@ -87,6 +87,13 @@ function render() {
     ctx.drawImage(apple, food.x, food.y, snakeBox, snakeBox);
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
+
+
+    if (dir == "LEFT") snakeX -= snakeBox;
+    if (dir == "RIGHT") snakeX += snakeBox;
+    if (dir == "UP") snakeX -= snakeBox;
+    if (dir == "DOWN") snakeX += snakeBox;
+
 }
 
 
