@@ -101,6 +101,9 @@ function render() {
         getFood();
     }
 
+    else {
+        snake.pop();
+    }
 }
 
 
