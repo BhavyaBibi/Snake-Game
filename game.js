@@ -39,7 +39,8 @@ let dir = "";
 document.addEventListener("keydown", direction)
 
 function direction() {
-    let key = Event.keyCode;
+
+    let key = event.keyCode;
     if (key == 37 && dir != "RIGHT") {
         dir = "LEFT";
         left.play();
@@ -111,6 +112,9 @@ function render() {
 
     };
     snake.unshift(newHead);
+    ctx.fillStyle = "black";
+    ctx.font = "40px tahoma";
+    ctx.fillText(score, 10, 40);
 }
 
 
